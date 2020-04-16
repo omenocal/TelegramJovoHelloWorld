@@ -1,0 +1,12 @@
+.env
+.nyc_output/
+test-reports/
+node_modules/
+db/
+bundle/
+bundle.zip
+swagger.yaml
+key-file.json
+platforms/alexaSkill/.ask/
+platforms/googleAction/dialogflow/Archive.zip
+platforms/googleAction/dialogflow_agent.zip

@@ -1,0 +1,228 @@
+{
+  "invocation": "telegram bot",
+  "inputTypes": [],
+  "dialogflow": {
+    "intents": [
+      {
+        "name": "DefaultFallbackIntent",
+        "auto": true,
+        "contexts": [],
+        "responses": [
+          {
+            "resetContexts": false,
+            "action": "input.unknown",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+              {
+                "type": 0,
+                "lang": "es",
+                "speech": [
+                  "Ups, no he entendido a que te refieres.",
+                  "¿Podrías repetirlo, por favor?",
+                  "¿Disculpa?",
+                  "¿Decías?",
+                  "¿Cómo?"
+                ]
+              }
+            ],
+            "defaultResponsePlatforms": {},
+            "speech": []
+          }
+        ],
+        "priority": 500000,
+        "webhookUsed": true,
+        "webhookForSlotFilling": false,
+        "fallbackIntent": true
+      }
+    ]
+  },
+  "intents": [
+    {
+      "name": "LaunchIntent",
+      "phrases": [
+        "buen dia",
+        "buenas tardes",
+        "buenos dias",
+        "hecho",
+        "hola",
+        "que está pasando hoy",
+        "que está pasando",
+        "que pasa",
+        "que sucede",
+        "un hecho"
+      ],
+      "dialogflow": {
+        "auto": false,
+        "contexts": [],
+        "priority": 500000,
+        "webhookUsed": true,
+        "webhookForSlotFilling": false,
+        "fallbackIntent": false,
+        "events": [
+          {
+            "name": "TELEGRAM_WELCOME"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HowAreYouIntent",
+      "phrases": [
+        "como estas",
+        "como te va",
+        "que tal tu dia"
+      ]
+    },
+    {
+      "name": "RepeatIntent",
+      "phrases": [
+        "consigueme la información otra vez por favor",
+        "consigueme la información otra vez",
+        "dame la información otra vez por favor",
+        "dame la información otra vez",
+        "devuélveme la información por favor",
+        "devuélveme la información",
+        "lee la información de vuelta por favor",
+        "leelo de nuevo",
+        "leer la información de nuevo",
+        "leer la información de vuelta",
+        "leer la información otra vez por favor",
+        "léelo de nuevo por favor",
+        "léelo de nuevo",
+        "repeti eso",
+        "repeti eso por favor",
+        "repeti eso de nuevo",
+        "repeti eso de nuevo por favor",
+        "repeti eso otra vez",
+        "repeti eso otra vez por favor",
+        "repetir",
+        "repita por favor",
+        "repite eso por favor",
+        "repite eso"
+      ]
+    },
+    {
+      "name": "YesIntent",
+      "phrases": [
+        "si",
+        "si por favor",
+        "sip",
+        "yep",
+        "listo",
+        "claro",
+        "seguro",
+        "gracias",
+        "yeah",
+        "okay",
+        "absolutamente",
+        "suena bien",
+        "seguro suena bien",
+        "afirmativo",
+        "amen",
+        "esta bien",
+        "bien",
+        "por favor",
+        "naturalmente",
+        "por supuesto",
+        "positivamente",
+        "muy bien",
+        "simon",
+        "pues claro",
+        "cool"
+      ]
+    },
+    {
+      "name": "NoIntent",
+      "phrases": [
+        "no",
+        "no gracias",
+        "nope",
+        "de ninguna forma",
+        "de ninguna manera",
+        "nunca",
+        "negativo",
+        "absolutamente no",
+        "por ningún motivo",
+        "por ningún caso",
+        "no esta vez",
+        "no nunca",
+        "desafortunadamente no",
+        "gracias pero no",
+        "tal vez otro día",
+        "nah",
+        "ahorita no"
+      ]
+    },
+    {
+      "name": "HelpIntent",
+      "phrases": [
+        "ayuda",
+        "ayúdame",
+        "ayuda por favor",
+        "por favor ayuda",
+        "que puedo preguntarte",
+        "que puedo preguntar",
+        "que puedo decir",
+        "como funciona esto",
+        "como funciona",
+        "como funcionas",
+        "como puedo usar esto",
+        "como hago esto",
+        "como haces esto",
+        "como usas esto",
+        "que hago",
+        "ahora que hago",
+        "necesito ayuda",
+        "que comandos puedo preguntar",
+        "que comandos puedo decir",
+        "que puedo hacer",
+        "para que uso esto",
+        "que preguntas puedo hacer",
+        "que puedes hacer",
+        "que haces",
+        "como te uso",
+        "como puedo usarte",
+        "que me puedes decir",
+        "otras opciones",
+        "opciones",
+        "como pido un juego",
+        "como juego esto",
+        "como juegas esto"
+      ]
+    },
+    {
+      "name": "StopIntent",
+      "phrases": [
+        "ya me arte",
+        "completado",
+        "terminado",
+        "fuera",
+        "fin",
+        "me aburrí",
+        "ya no mas",
+        "para",
+        "eso es todo",
+        "cierra",
+        "el fin",
+        "cállate",
+        "por favor cierra",
+        "adios",
+        "nos vemos"
+      ],
+      "dialogflow": {
+        "auto": false,
+        "contexts": [],
+        "priority": 500000,
+        "webhookUsed": true,
+        "webhookForSlotFilling": false,
+        "fallbackIntent": false,
+        "events": [
+          {
+            "name": "actions_intent_CANCEL"
+          }
+        ]
+      }
+    }
+  ]
+}

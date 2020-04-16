@@ -1,0 +1,38 @@
+{
+	"defaultTimezone": "America/Chicago",
+	"description": "",
+	"webhook": {
+		"url": "",
+		"available": true,
+		"useForDomains": false,
+		"cloudFunctionsEnabled": false,
+		"cloudFunctionsInitialized": false
+	},
+	"language": "en",
+	"supportedLanguages": [
+		"es"
+	],
+	"disableInteractionLogs": false,
+	"disableStackdriverLogs": true,
+	"googleAssistant": {
+		"googleAssistantCompatible": true,
+		"welcomeIntentSignInRequired": false,
+		"startIntents": [],
+		"systemIntents": [],
+		"endIntentIds": [],
+		"oAuthLinking": {
+			"required": false,
+			"grantType": "AUTH_CODE_GRANT"
+		},
+		"voiceType": "FEMALE_1",
+		"capabilities": [],
+		"protocolVersion": "V2",
+		"autoPreviewEnabled": false,
+		"isDeviceAgent": false
+	},
+	"isPrivate": true,
+	"onePlatformApiVersion": "v2",
+	"analyzeQueryTextSentiment": false,
+	"enabledKnowledgeBaseNames": [],
+	"knowledgeServiceConfidenceAdjustment": -0.4
+}

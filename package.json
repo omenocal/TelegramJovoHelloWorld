@@ -1,0 +1,56 @@
+{
+  "name": "TelegramJovoHelloWorld",
+  "version": "0.0.1",
+  "description": "Sample Template to create Telegram bots with the Jovo Framework.",
+  "main": "src/index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "jovo-db-dynamodb": "^3.0.13",
+    "jovo-db-filedb": "^3.0.13",
+    "jovo-framework": "^3.0.13",
+    "jovo-platform-dialogflow": "^3.0.13",
+    "jovo-plugin-debugger": "^3.0.13",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.5",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "gulp": "^4.0.2",
+    "gulp-install": "^1.1.0",
+    "gulp-run-command": "0.0.10",
+    "gulp-zip": "^5.0.1",
+    "husky": "^4.2.5",
+    "mocha": "^7.1.1",
+    "mocha-junit-reporter": "^1.23.3",
+    "nyc": "^15.0.1",
+    "virtual-google-assistant": "^0.3.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "scripts": {
+    "all": "rm yarn.lock; rm -r bundle/; rm bundle.zip; rm -r node_modules/; yarn install",
+    "lint": "eslint src/ project.js",
+    "lint-fix": "eslint --fix src/ project.js",
+    "deployLambda": "jovo deploy -p alexaSkill --stage prod -t lambda",
+    "updateAlias": "node scripts/deployAlias.js",
+    "test": "NODE_ENV=UNIT_TEST mocha test/*.test.* test/**/*.test.*",
+    "test-ci": "NODE_ENV=UNIT_TEST nyc mocha test test/*.test.* test/**/*.test.* --reporter mocha-junit-reporter --reporter-options mochaFile=./test-reports/junit.xml",
+    "bundle": "gulp --gulpfile node_modules/jovo-framework/gulpfile.js --cwd ./",
+    "start": "cd src && node index.js --webhook",
+    "launch": "npm start -- --launch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omenocal/TelegramJovoHelloWorld.git"
+  },
+  "author": "Octavio Menocal",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/omenocal/TelegramJovoHelloWorld#readme"
+}

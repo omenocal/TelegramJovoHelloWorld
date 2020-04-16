@@ -1,0 +1,14 @@
+{
+	"name": "LaunchIntent",
+	"auto": false,
+	"webhookUsed": true,
+	"contexts": [],
+	"priority": 500000,
+	"webhookForSlotFilling": false,
+	"fallbackIntent": false,
+	"events": [
+		{
+			"name": "TELEGRAM_WELCOME"
+		}
+	]
+}

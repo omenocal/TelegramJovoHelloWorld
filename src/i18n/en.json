@@ -1,0 +1,22 @@
+{
+  "translation": {
+    "GeneralQuestion": "What would you like to ask?",
+
+    "WelcomeFirstTime": {
+      "ask": "Welcome to Telegram Bot Hello World. $t(GeneralQuestion)",
+      "reprompt": "$t(GeneralQuestion)"
+    },
+
+    "WelcomeBack": {
+      "ask": "Welcome back. $t(GeneralQuestion)",
+      "reprompt": "$t(GeneralQuestion)"
+    },
+
+    "HowAreYou": {
+      "ask": "Thanks for asking. I'm doing great, how about you?",
+      "reprompt": "How are you?"
+    },
+
+    "Exit": "Ok. Goodbye"
+  }
+}

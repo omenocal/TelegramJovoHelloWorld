@@ -1,0 +1,30 @@
+{
+  "extends": "airbnb-base",
+  "parserOptions": {
+    "sourceType": "script"
+  },
+  "plugins": [
+    "import"
+  ],
+  "rules": {
+    "consistent-return" : "warn",
+    "global-require": "off",
+    "import/no-extraneous-dependencies": "off",
+    "import/no-dynamic-require": "off",
+    "linebreak-style": "off",
+    "max-len": "warn",
+    "no-console": "off",
+    "no-multi-assign": "warn",
+    "no-nested-ternary": "off",
+    "no-unused-expressions": "off",
+    "no-use-before-define": "off",
+    "no-param-reassign": "off",
+    "no-unused-vars": "warn",
+    "strict": "off"
+  },
+  "env": {
+    "browser": false,
+    "node": true,
+    "mocha": true
+  }
+}

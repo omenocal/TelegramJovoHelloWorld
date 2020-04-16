@@ -1,0 +1,14 @@
+{
+	"name": "CancelIntent",
+	"auto": false,
+	"webhookUsed": true,
+	"contexts": [],
+	"priority": 500000,
+	"webhookForSlotFilling": false,
+	"fallbackIntent": false,
+	"events": [
+		{
+			"name": "actions_intent_CANCEL"
+		}
+	]
+}

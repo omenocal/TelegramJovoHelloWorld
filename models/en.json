@@ -1,0 +1,294 @@
+{
+  "invocation": "telegram bot",
+  "inputTypes": [],
+  "dialogflow": {
+    "intents": [
+      {
+        "name": "DefaultFallbackIntent",
+        "auto": true,
+        "contexts": [],
+        "responses": [
+          {
+            "resetContexts": false,
+            "action": "input.unknown",
+            "affectedContexts": [],
+            "parameters": [],
+            "messages": [
+              {
+                "type": 0,
+                "lang": "en",
+                "speech": [
+                  "I didn't get that. Can you say it again?",
+                  "I missed what you said. Say it again?",
+                  "Sorry, could you say that again?",
+                  "Sorry, can you say that again?",
+                  "Can you say that again?",
+                  "Sorry, I didn't get that.",
+                  "Sorry, what was that?",
+                  "One more time?",
+                  "What was that?",
+                  "Say that again?",
+                  "I didn't get that.",
+                  "I missed that."
+                ]
+              },
+              {
+                "type": 0,
+                "lang": "es",
+                "speech": [
+                  "Ups, no he entendido a que te refieres.",
+                  "¿Podrías repetirlo, por favor?",
+                  "¿Disculpa?",
+                  "¿Decías?",
+                  "¿Cómo?"
+                ]
+              }
+            ],
+            "defaultResponsePlatforms": {},
+            "speech": []
+          }
+        ],
+        "priority": 500000,
+        "webhookUsed": true,
+        "webhookForSlotFilling": false,
+        "fallbackIntent": true
+      }
+    ]
+  },
+  "intents": [
+    {
+      "name": "LaunchIntent",
+      "phrases": [
+        "a fact",
+        "fact",
+        "give me a fact",
+        "good afternoon",
+        "good evening",
+        "good morning",
+        "good night",
+        "hello",
+        "hey",
+        "heya",
+        "hi there",
+        "hi",
+        "sup",
+        "tell me a fact",
+        "what can you do",
+        "what do you do",
+        "what happens",
+        "what's going on",
+        "what's happening today",
+        "what's happening",
+        "what's up",
+        "whatsup",
+        "yo"
+      ],
+      "dialogflow": {
+        "auto": false,
+        "contexts": [],
+        "priority": 500000,
+        "webhookUsed": true,
+        "webhookForSlotFilling": false,
+        "fallbackIntent": false,
+        "events": [
+          {
+            "name": "TELEGRAM_WELCOME"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HowAreYouIntent",
+      "phrases": [
+        "how are you doing",
+        "how are you",
+        "how is your day",
+        "how's your day"
+      ]
+    },
+    {
+      "name": "RepeatIntent",
+      "phrases": [
+        "read the info back",
+        "read the info back please",
+        "read it back",
+        "read it back please",
+        "repeat",
+        "repeat that",
+        "repeat please",
+        "repeat that please",
+        "give me the info back",
+        "give me the info back please",
+        "get me the info back",
+        "get me the info back please",
+        "read the info again",
+        "read the info again please",
+        "read it again",
+        "read it again please",
+        "give me the info again",
+        "give me the info again please",
+        "get me the info again",
+        "get me the info again please"
+      ]
+    },
+    {
+      "name": "YesIntent",
+      "phrases": [
+        "yes please",
+        "yup",
+        "yep",
+        "ready",
+        "sure",
+        "yeah",
+        "okay",
+        "absolutely",
+        "sure sounds good",
+        "affirmative",
+        "amen",
+        "find",
+        "good",
+        "yea",
+        "all right",
+        "aye aye",
+        "please",
+        "gladly",
+        "naturally",
+        "of course",
+        "positively",
+        "sure thing",
+        "very well",
+        "roger",
+        "all righty",
+        "check",
+        "cool",
+        "yes way",
+        "yeppers",
+        "yessum",
+        "hells yes",
+        "hell ya",
+        "hell yea",
+        "right on"
+      ]
+    },
+    {
+      "name": "NoIntent",
+      "phrases": [
+        "no",
+        "no thank you",
+        "no thanks",
+        "nope",
+        "no way",
+        "never",
+        "negative",
+        "negatron",
+        "nix",
+        "absolutely not",
+        "not by any means",
+        "no means",
+        "not at all",
+        "hell no",
+        "not this time",
+        "not ever",
+        "unfortunately not",
+        "thanks but no thanks",
+        "maybe another time",
+        "nah",
+        "not right now",
+        "not now"
+      ]
+    },
+    {
+      "name": "HelpIntent",
+      "phrases": [
+        "help",
+        "help me",
+        "help please",
+        "please help",
+        "what can i ask you",
+        "what can i ask",
+        "what can i say",
+        "how does this work",
+        "how does it work",
+        "how do you work",
+        "how do i use this",
+        "how do i do this",
+        "how do you do this",
+        "how do you use this",
+        "what do i do",
+        "what do i do next",
+        "how do i navigate",
+        "get help",
+        "what commands can i ask",
+        "what commands can i say",
+        "what can i do",
+        "what can i use this for",
+        "what questions can i ask",
+        "what can you do",
+        "what do you do",
+        "how do i use you",
+        "how can i use you",
+        "what can you tell me",
+        "other options",
+        "options",
+        "how do i ask for a game",
+        "how do i play this",
+        "how can i play this"
+      ]
+    },
+    {
+      "name": "CancelIntent",
+      "phrases": [
+        "cancel",
+        "cancel it"
+      ],
+      "dialogflow": {
+        "auto": false,
+        "contexts": [],
+        "priority": 500000,
+        "webhookUsed": true,
+        "webhookForSlotFilling": false,
+        "fallbackIntent": false,
+        "events": [
+          {
+            "name": "actions_intent_CANCEL"
+          }
+        ]
+      }
+    },
+    {
+      "name": "StopIntent",
+      "phrases": [
+        "all done",
+        "bye bye",
+        "bye",
+        "close",
+        "complete",
+        "done",
+        "end",
+        "exit",
+        "finished",
+        "goodbye",
+        "i am done",
+        "i'm done",
+        "no more",
+        "please close",
+        "quit",
+        "stop",
+        "the end"
+      ],
+      "dialogflow": {
+        "auto": false,
+        "contexts": [],
+        "priority": 500000,
+        "webhookUsed": true,
+        "webhookForSlotFilling": false,
+        "fallbackIntent": false,
+        "events": [
+          {
+            "name": "actions_intent_CANCEL"
+          }
+        ]
+      }
+    }
+  ]
+}
